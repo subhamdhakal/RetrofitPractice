@@ -1,15 +1,12 @@
-package subham.com.rxkotlinapplication
+package subham.com.rxkotlinapplication.Api
 
-import android.graphics.ColorSpace
 import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
-
-
-
+import subham.com.rxkotlinapplication.Model.Model
 
 //https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=Trump,
 //https://www.simplifiedcoding.net/demos/marvel/
@@ -27,7 +24,7 @@ interface WikiApiService {
 
 
     companion object {
-        fun create():WikiApiService {
+        fun create(): WikiApiService {
             val retrofit = Retrofit.Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())

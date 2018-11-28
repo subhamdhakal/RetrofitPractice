@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <variable
+            name = "viewModel"
+            type = "subham.com.rxkotlinapplication.viewmodel.PostsViewModel">
+
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:orientation = "vertical"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content">
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text="@{viewModel.id}"
+            />
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text="@{viewModel.userId}"/>
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text="@{viewModel.title}"/>
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text="@{viewModel.body}"/>
+
+    </LinearLayout>
+
+</layout>

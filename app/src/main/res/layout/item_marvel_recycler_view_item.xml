@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+  >
+    <data>
+        
+        <variable
+            name = "viewModel"
+            type = "subham.com.rxkotlinapplication.viewmodel.MarvelRecyclerViewModel">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content">
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            tools:text="spiderman"
+            android:text="@{viewModel.name}"
+            />
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            tools:text="realname"
+            android:text="@{viewModel.realName}"
+            />
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text="@{viewModel.team}"
+            tools:text="team"
+            />
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text="@{viewModel.firstAppreance}"
+            tools:text="firstappearence"
+            />
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:text="@{viewModel.creator}"
+            tools:text="createdby"
+            />
+        <View
+            android:layout_width = "match_parent"
+            android:layout_height = "8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary">
+
+        </View>
+
+    </LinearLayout>
+
+</layout>
